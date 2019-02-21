@@ -1,0 +1,48 @@
+<!--pages/dingxiang/dingxiang.wxml-->
+<!-- <text>pages/dingxiang/dingxiang.wxml</text> -->
+<view class='da'  style='height:{{winHeight}}px'>
+  <view class='shou'>
+    <view class='ming'>
+      <text>收货人：{{xiang.address_user_name}}</text>
+      <text>{{xiang.address_user_mobile}}</text>
+    </view>
+    <view class='dizhi'>收货地址：{{xiang.province_val}}{{xiang.city_val}}{{xiang.district_val}}{{xiang.address_user_address}}</view>
+  </view>
+  <view class='fukuan'>
+    <view class='wupin' wx:for="{{shop}}" wx:key="index">
+      <view class='tu'><image src='{{item.goods_img}}'></image></view>
+      <view class='right_ri'>
+        <view class='title'>美国进口柠檬 新鲜水果</view>
+        <view class='jie'>{{item.goods_point}}</view>
+        <view class='price'>￥{{item.goods_price}}</view>
+        <view class='gouwu'>
+          <text class='gou'>规格：{{item.goods_spec}}</text>
+          <text class='gou' style='margin-left:20rpx;'>数量：{{item.goods_stock}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='li'>
+      <view class='li_mai'><text>购买数量</text><text>{{xiang.is_freight}}件</text></view>
+      <view class='li_mai'>
+        <text>快递费</text>
+        <text wx:if="{{xiang.is_freight==1}}">￥{{xiang.goods_ex_price}}</text>
+        <text wx:if="{{xiang.is_freight==2}}">￥免运费</text>
+      </view>
+      <view class='li_mai'><text>使用优惠券</text><text>-￥{{xiang.coupon_price}}</text></view>
+      <view class='li_mai'><text>实付款</text><text>￥{{xiang.pay_total}}</text></view>
+    </view>
+    <view class='textarea'>
+      <text>备注:</text>
+      <textarea class="input" cursor-spacing="20" name="beizhu" bindinput ="userNameInput"></textarea>
+    </view>
+    
+  </view>
+  <view class='bian'>
+      <view>订单编号：{{xiang.order_sn}}</view>
+      <view style='margin-top:11rpx;'>创建时间：{{xiang.create_time}}</view>
+    </view>
+</view>
+<view class='di'>
+  <view style='background:white;color:#5C5C5C;' bindtap='qvxiao'>取消付款</view>
+  <view style='background:#F1B22F;color:#fff;' bindtap='fukuan' data-orderid="{{xiang.order_id}}" data-jine="{{xiang.pay_total}}">付款</view>
+</view>

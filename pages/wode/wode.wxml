@@ -1,0 +1,79 @@
+
+<view class='duoduo'>
+  <view class='xiaoxi'>
+    <image src='/img/xiaoxi.png' bindtap='xiaoxi'></image>
+  </view>
+  <view class='xinxi'>
+    <view class='touxiang' bindtap='geren' data-touxiang="{{zhongxin.user_head_img}}">
+      <image src='{{zhongxin.user_head_img}}'></image>
+    </view>
+    <view class='tel'>
+      <view style='font-size: 32rpx;color: #444444;letter-spacing: 1.4rpx;'>{{zhongxin.user_nickname}}</view>
+      <view style='font-size: 24rpx;color: #717171;letter-spacing: 1.4rpx;'>可用积分：{{zhongxin.user_now_score}}</view>
+    </view>
+    <view class='xian'></view>
+    <view class='qian'  bindtap='qiandao'>
+      <view class='tu'><image src='/img/qiandao.png'></image></view>
+      <view class='wen'> {{qiandao==0?"签到":"已签到"}}</view>
+    </view>
+  </view>
+</view>
+<view class='qinbao'>
+  <view>我的钱包</view>
+  <view style='font-size: 24rpx;color: white;letter-spacing: 0.9rpx;'>查看全部订单></view>
+</view>
+<view class='fuli'>
+  <view class='fuli_li' bindtap='jifen' data-jifen="{{zhongxin.user_now_score}}">
+    <image src='/img/ji.png'></image> 
+    <view>积分</view>
+  </view>
+  <view class='fuli_li' bindtap='youhui'>
+    <image src='/img/quan.png'></image>
+    <view style='margin-left:1rpx;'>优惠券</view>
+  </view>
+</view>
+<view class='hui'></view>
+<view class='qinbao'>
+  <view>我的订单</view>
+  <view style='font-size: 24rpx;color: #A0A0A0;letter-spacing: 0.9rpx;' bindtap='ding'>查看全部订单></view>
+</view>
+<view class='fuli'>
+  <view class='fuli_li' bindtap='fukuan'>
+    <i class="iconfont icon-daifukuan"></i>
+    <view>待付款</view>
+  </view>
+  <view class='fuli_li' bindtap='fahuo'>
+    <i class="iconfont icon-daifahuo"></i>
+    <view>待发货</view>
+  </view>
+  <view class='fuli_li' bindtap='shouhuo'>
+    <i class="iconfont icon-daishouhuo"></i>
+    <view>待收货</view>
+  </view>
+  <view class='fuli_li' bindtap='tuihuo'>
+    <i class="iconfont icon-tuikuan"></i>
+    <view>退换/售后</view>
+  </view>
+</view>
+<view class='hui'></view>
+<view class='fuli'>
+  <view class='fuli_li'  bindtap='dizhi'>
+    <i class="iconfont icon-shouhuodizhi"  style='margin-top:8rpx;'></i>
+    <view style='margin-top: 22rpx;'>收货地址</view>
+  </view>
+  <view class='fuli_li' bindtap='shoucang'>
+    <image src='/img/shoucang.png' style='margin-top:14rpx;'></image>
+    <view style='margin-top: 24rpx;'>收藏</view>
+  </view>
+  <view class='fuli_li' bindtap='settings'>
+    <i class="iconfont icon-settings"  style='margin-top:8rpx;'></i>
+    <view>设置</view>
+  </view>
+  <view class='fuli_li'>
+     <button class="cs_button" session-from="7moor|{{zhongxin.user_nickname==userInfo.nickName}}|{{zhongxin.user_head_img==userInfo.avatarUrl}}" open-type="contact" session-from="weapp">
+      <i class="iconfont icon-kefu" style="font-size:52rpx"></i>
+    </button> 
+    <view style='margin-top: 26rpx;'>客服</view>
+  </view> 
+  
+</view>

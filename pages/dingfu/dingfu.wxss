@@ -1,0 +1,82 @@
+/* pages/dingfu/dingfu.wxss */
+.zhifang{
+  width: 96%;
+  margin-left: 4%;
+  display: flex;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+  height: 116rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.zhifang .left{
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 0.54rpx;
+}
+.jine{
+  width: 100%;
+  height: 209rpx;
+  position: relative;
+}
+.jine image{
+  width: 100%;
+  height: 209rpx;
+}
+.jine .wen{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20%;
+}
+.jine .wen .qian{
+  font-size: 60rpx;
+}
+.jine .wen .zi{
+  font-size: 22rpx;
+}
+checkbox .wx-checkbox-input{
+   width: 48rpx; /* 背景的宽 */
+   height: 48rpx; /* 背景的高 */
+   color:#000;
+   border-radius: 50%;/* 圆角 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked{
+   border: none;
+   background: orange;
+   color:#000;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 48rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 48rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 48rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   color:#000;
+}
+.xian{
+  width: 100%;
+  height: 20rpx;
+  background: #F8F8F8;
+}
+.zhifu{
+  width: 100%;
+  height: 100rpx;
+  background: #F1B22F;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 0;
+}

@@ -1,0 +1,40 @@
+<!--pages/jifen/jifen.wxml-->
+<!-- <text>pages/jifen/jifen.wxml</text> -->
+<view class='da'>
+  <view class='da_er'>
+    <view class='jifen'>
+    <image src='/img/beijing.png'></image>
+    <view class='ding'>
+      <text>{{jifen}}积分</text>
+      <text>剩余积分</text>
+    </view>
+  </view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}" data-tid="{{idx}}" bindtap="swichNav" wx:for="{{navtab}}" wx:key="index" wx:for-index="idx">{{item}}</view>
+  </view>
+  </view>
+
+  <view class="swiper-box">
+
+    <view class="swiper-item" wx:if="{{currentTab===0}}">
+      <view class='shouyi' wx:for="{{shouyi}}" wx:key="index">
+        <view class='shang'>
+          <text>{{item.log_explain}}</text>
+          <text>{{item.log_num}}</text>
+        </view>
+        <view class='xia'>{{item.create_time}}</view>
+      </view>
+    </view>
+
+    <view class="swiper-item" wx:if="{{currentTab===1}}">
+      <view class='shouyi' wx:for="{{xiaofei}}" wx:key="index">
+        <view class='shang'>
+          <text>{{item.log_explain}}</text>
+          <text>{{item.log_num}}</text>
+        </view>
+        <view class='xia'>{{item.create_time}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,39 @@
+/* pages/newsdetails/newsdetails.wxss */
+
+.da {
+  width: 100%;
+  padding: 0 4% 0 4%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.da .title {
+  font-size: 36rpx;
+  color: #303030;
+  letter-spacing: 0.69rpx;
+  text-align: left;
+}
+
+.da .time {
+  font-size: 26rpx;
+  color: #9c9c9c;
+  letter-spacing: 0.61rpx;
+  text-align: left;
+  margin-top: 20rpx;
+}
+
+.wxParse-p {
+  width: 100%;
+  text-align: left;
+  margin-top: 20rpx;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+
+.wxParse-p image {
+  width: 100% !important;
+}
+.wxParse-section{
+  padding: 0 4%;
+  box-sizing: border-box;
+}

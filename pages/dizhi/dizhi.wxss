@@ -1,0 +1,68 @@
+/* pages/dizhi/dizhi.wxss */
+.cun{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background: #f1b22f;
+  font-size: 30rpx;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+}
+.address{
+  width: 100%;
+  border-top: 1rpx solid #D8D8D8;
+  border-bottom: 20rpx solid #F8F8F8;
+  /* height: 243rpx; */
+}
+.address .xinxi{
+  width: 96%;
+  /* height: 167rpx; */
+  margin-left: 4%;
+  padding: 20rpx 4% 12rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.address .name .username{
+  font-size: 32rpx;
+color: #303030;
+}
+.address .name .mobile{
+font-size: 30rpx;
+color: #9F9F9F;
+}
+.address .dizhi{
+  font-size: 28rpx;
+color: #303030;
+}
+.moren{
+  width: 96%;
+  margin-left: 4%;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+  height: 75rpx;
+}
+.moren .mo{
+  line-height: 75rpx;
+  font-size: 28rpx;
+  color: #A4A4A4;
+  letter-spacing: 0.06rpx;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+.moren .caozuo{
+  width: 200rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  margin-right: 0;
+}
+.moren .caozuo view{
+  font-size: 28rpx;
+color: #A4A4A4;
+letter-spacing: 0.06px;
+}

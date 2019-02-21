@@ -1,0 +1,160 @@
+/* pages/dingxiang/dingxiang.wxss */
+.da{
+  width: 100%; 
+  min-height: 100%;
+  background-color: #F3F3F3;
+  overflow: hidden;
+}
+.da .shou{
+  width: 98%;
+  margin: 9rpx auto;
+  background: white;
+  /* height: 169rpx; */
+  padding: 16rpx 42rpx 24rpx 27rpx;
+  box-sizing: border-box;
+}
+.da .shou .ming{
+  font-size: 30rpx;
+  color: #303030;
+  display: flex;
+  justify-content: space-between;
+}
+.da .shou .dizhi{
+  font-size: 26rpx;
+  color: #303030;
+  margin-top: 13rpx;
+}
+.fukuan{
+  width: 100%;
+  /* height: 600rpx; */
+  margin-top: 10rpx;
+  background: white;
+}
+.fukuan .wupin{
+  width: 96%;
+  margin-left: 4%;
+  border-bottom: 1rpx solid #ECECEC;
+  height: 234rpx;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  
+}
+.fukuan .wupin .tu{
+  width: 187rpx;
+  height: 187rpx;
+  background: #F8F9FB;
+  overflow: hidden;
+}
+.fukuan .wupin .tu image{
+  width: 161rpx;
+  height: 103rpx;
+  /* margin-top: 20%; */
+  display: block;
+  margin: 20% auto;
+}
+.fukuan .wupin .right_ri{
+  margin-left: 5%;
+  width: 70%;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+}
+.fukuan .wupin .right_ri .title{
+font-size: 30rpx;
+color: #040404;
+letter-spacing: 1.17px;
+}
+.fukuan .wupin .right_ri .jie{
+font-size: 26rpx;
+color: #9F9F9F;
+letter-spacing: 0.46px;
+margin-top: 10rpx;
+}
+.fukuan .wupin .right_ri .price{
+font-size: 34rpx;
+color: #464646;
+letter-spacing: 0.61px;
+margin-top: 10rpx;
+}
+
+.fukuan .wupin .right_ri .gouwu{
+  width: 100%;
+  margin-top: 5rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.fukuan .wupin .right_ri .gouwu .gou{
+font-size: 24rpx;
+color: #9F9F9F;
+letter-spacing: 0.43px;
+}
+.fukuan .li{
+  width: 100%;
+  margin: 10rpx 0;
+}
+.fukuan .li .li_mai{
+  width: 96%;
+  margin: auto;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #5A5A5A;
+  letter-spacing: 0.5px;
+}
+.fukuan .bei{
+  width: 98%;
+  margin-left: 2%;
+  height: 79rpx;
+  line-height: 79rpx;
+  border-top: 1rpx solid #EEEEEE;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #5A5A5A;
+  letter-spacing: 0.5px;
+}
+.bian{
+  margin-top: 20rpx;
+  width: 100%;
+  background: white;
+  height: 120rpx;
+  padding: 23rpx 2%;
+  font-size: 24rpx;
+  color: #5A5A5A;
+  letter-spacing: 0.43px;
+  box-sizing: border-box;
+}
+.di{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+.di view{
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.textarea{
+  width: 98%;
+  height: 95rpx;
+  margin-left: 4%;
+  display: flex;
+  font-size: 30rpx;
+  color: #5A5A5A;
+  letter-spacing: 0.54rpx;
+}
+.textarea text{
+  line-height: 75rpx;
+  width: 100rpx;
+}
+.textarea textarea{
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 75rpx;
+}

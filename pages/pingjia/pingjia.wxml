@@ -1,0 +1,27 @@
+<!--pages/pingjia/pingjia.wxml-->
+<!-- <text>pages/pingjia/pingjia.wxml</text> -->
+<form bindsubmit="bindFormSubmit">
+  <textarea placeholder="请输入您想评价该商品的话" value="{{my_text}}" name="textarea" />
+
+  <view class="right">
+    <view bindtap="starTap" data-index="{{index}}" class="star" wx:for="{{userStars}}" wx:key="index">
+      <image src="{{item}}"></image>
+    </view>
+    <view class='wen'>{{star_con}}</view>
+  </view>
+
+  <view class='tian'>添加图片：</view>
+  <view class='shi'>
+    <image src='/img/shi.png' bindtap='up_img' name="up_img" class='shizi' />
+    <view class='chuantu'>
+      <image wx:for="{{tempFilePaths}}" src='{{item}}' wx:key="index" name="pic" class='tu' />
+      <input hidden name="pic" value="{{tempFilePaths}}"></input>
+      <view class='cha' wx:if="{{tempFilePaths!=''}}" bindtap='shanchu'>
+        <image src='/img/cha.png'></image>
+      </view>
+    </view>
+
+  </view>
+
+  <button form-type="submit"> 发送评论 </button>
+</form>

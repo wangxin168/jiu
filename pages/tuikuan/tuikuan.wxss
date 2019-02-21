@@ -1,0 +1,44 @@
+/* pages/pingjia/pingjia.wxss */
+textarea{
+  width: 100%;
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #CACACA;
+  letter-spacing: -0.4rpx;
+  height: 264rpx;
+  background: #F9F9F9;
+  padding: 4% 3%;
+  box-sizing: border-box;
+}
+.shi{
+  width: 96%;
+  margin-left: 4%;
+  margin-top: 17rpx;
+}
+.shi image{
+  width: 157rpx;
+  height: 158rpx;
+}
+.tian{
+  width: 96%;
+  margin-left: 4%;
+  margin-top: 28rpx;
+  font-size: 30rpx;
+color: #3C3C3C;
+}
+button{
+  width: 625rpx;
+  height: 99rpx;
+  background: linear-gradient(-90deg, #F1B22F 0%, #FDCD69 100%);
+  border: 1px solid #F5D083;
+  box-shadow: 0 5rpx 14rpx 2rpx #F2D18B;
+  border-radius: 49.5px;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 99rpx;
+  margin-top: 116rpx;
+}
+button::after{
+  border:none;
+}

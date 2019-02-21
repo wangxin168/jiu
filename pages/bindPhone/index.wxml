@@ -1,0 +1,12 @@
+<view class="box">
+    <form bindsubmit="formSubmit">
+        <view class='item'>
+              <input name="tel" type='number' bindblur="inputTel" placeholder="请输入手机号码" />
+        </view>
+        <view class='item'>
+              <input name="code" placeholder="请输入验证码" />
+              <button bindtap='sendCode'>{{vals}}</button>
+        </view>
+        <button formType="submit" class='sumBtn'>确定</button>
+    </form>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/sange/sange.wxml-->
+<!-- <text>pages/sange/sange.wxml</text> -->
+<view class='san_ul'>
+  <view class='san_li' wx:for="{{sange}}" wx:key="index" bindtap='chaner' data-typeid="{{item.type_id}}" data-type="{{item.is_type}}" data-nochuan="1" data-name="{{item.type_name}}"  data-twotypeid="">
+    <view class='shang'>
+      <image src='{{item.type_img}}'></image>
+    </view>
+    <view class='xia'>{{item.type_name}}</view>
+  </view>
+</view>

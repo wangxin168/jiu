@@ -1,0 +1,254 @@
+page {
+  padding-bottom: 60rpx;
+  /* background: #F8F8F8; */
+}
+
+checkbox .wx-checkbox-input {
+  width: 36rpx; /* 背景的宽 */
+  height: 36rpx; /* 背景的高 */
+  color: #000;
+  border-radius: 50%; /* 圆角 */
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked {
+  border: none;
+  background: orange;
+  color: #000;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 36rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 36rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 30rpx; /* 对勾大小 30rpx */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  color: #000;
+}
+
+.chang {
+  width: 100%;
+  margin-bottom: 120rpx;
+  z-index: 1;
+}
+
+.da {
+  width: 96%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.da .left {
+  width: 10%;
+  text-align: center;
+}
+
+.da .right {
+  width: 90%;
+  display: flex;
+  height: 236rpx;
+  background: #fff;
+  box-shadow: 1px 4px 6px 1px rgba(196, 196, 196, 0.50);
+  padding: 29rpx 14rpx 42rpx 25rpx;
+  box-sizing: border-box;
+}
+
+.da .right .right_le {
+  width: 165rpx;
+  height: 165rpx;
+}
+
+.da .right .right_ri {
+  padding: 0 0 0 4%;
+  width: 70%;
+}
+
+.da .right .right_ri .title {
+  width: 100%;
+  font-size: 28rpx;
+  color: #040404;
+  letter-spacing: 1.09px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.da .right .right_ri .jie {
+  width: 100%;
+  font-size: 26rpx;
+  color: #9f9f9f;
+  letter-spacing: 0.46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.da .right .right_ri .price {
+  font-size: 36rpx;
+  color: #f21e00;
+  letter-spacing: 0.64px;
+}
+
+.da .right .right_ri .gouwu {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.da .right .right_ri .gouwu .gou {
+  font-size: 24rpx;
+  color: #9f9f9f;
+  letter-spacing: -0.27px;
+}
+
+.da .right .right_ri .gouwu .hui {
+  background: #ededed;
+  text-align: center;
+  line-height: 34.1rpx;
+  font-size: 19.2rpx;
+  color: #858585;
+  letter-spacing: 0.57px;
+  margin-left: 9rpx;
+  display: block;
+}
+
+.di {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eaeaea;
+  background: white;
+}
+
+.di .check {
+  display: flex;
+  text-align: center;
+  width: 25%;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.di .check view {
+  font-size: 24rpx;
+  color: #9f9f9f;
+  letter-spacing: -0.27px;
+}
+
+.di .heji {
+  width: 45%;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 0.54px;
+  text-align: center;
+}
+
+.di .jiesuan {
+  width: 220rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #f1b22f;
+  font-size: 30rpx;
+  color: #fff;
+  letter-spacing: 0.54px;
+}
+
+.shanchu {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 203rpx;
+  right: 34rpx;
+}
+
+.kong {
+  width: 100%;
+  height: 100%;
+  /* background: #F8F8F8; */
+}
+
+.kong view {
+  width: 100%;
+  font-size: 30rpx;
+  color: #a4a4a4;
+  text-align: center;
+}
+
+.kong view image {
+  width: 212rpx;
+  height: 272rpx;
+  display: inline-block;
+}
+
+.delete {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.30);
+  top: 0;
+  left: 0;
+}
+
+.delete .queshan {
+  width: 100%;
+  height: 350rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.delete .queshan .queren {
+  background: #fff;
+  border-radius: 10rpx;
+  width: 94%;
+  height: 222rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: auto;
+}
+
+.delete .queshan .queren .queren_ma {
+  font-size: 28rpx;
+  color: #7c7c7c;
+  letter-spacing: 1.05rpx;
+  height: 111rpx;
+}
+
+.delete .queshan .queren .queren_que {
+  font-size: 34rpx;
+  color: #ff1818;
+  letter-spacing: 1.27rpx;
+  border-top: 1rpx solid #d8d8d8;
+  height: 111rpx;
+}
+
+.delete .qvxiao {
+  font-size: 34rpx;
+  color: #0f6ff1;
+  letter-spacing: 1.27rpx;
+  height: 105rpx;
+  background: white;
+  text-align: center;
+  line-height: 105rpx;
+  margin: 22rpx auto 0;
+  width: 94%;
+  border-radius: 10rpx;
+}

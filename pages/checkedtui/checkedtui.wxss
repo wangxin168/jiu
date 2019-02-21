@@ -1,0 +1,112 @@
+/* pages/checkedtui/checkedtui.wxss */
+page{
+  padding-bottom: 60rpx;
+}
+checkbox .wx-checkbox-input{
+   width: 36rpx; /* 背景的宽 */
+   height: 36rpx; /* 背景的高 */
+   color:#000;
+   border-radius: 50%;/* 圆角 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked{
+   border: none;
+   background: orange;
+   color:#000;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 36rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 36rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 36rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   color:#000;
+}
+.chang{
+  width: 100%;
+  margin-bottom: 120rpx;
+}
+.da{
+  width: 96%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.da .left{
+  width: 10%;
+  text-align: center;
+}
+.da .right{
+  width: 90%;
+  display: flex;
+  height: 236rpx;
+  background: #FFFFFF;
+box-shadow: 1px 4px 6px 1px rgba(196,196,196,0.50);
+padding: 29rpx 14rpx 42rpx 25rpx;
+box-sizing: border-box;
+}
+.da .right .right_le image{
+  width: 165rpx;
+  height: 165rpx;
+}
+.da .right .right_ri{
+  padding: 0 0 0 4%;
+  width: 70%;
+}
+.da .right .right_ri .title{
+  width: 100%;
+  font-size: 28rpx;
+  color: #040404;
+  letter-spacing: 1.09px;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.da .right .right_ri .jie{
+  width: 100%;
+  font-size: 26rpx;
+color: #9F9F9F;
+letter-spacing: 0.46px;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.da .right .right_ri .price{
+  font-size: 36rpx;
+color: #F21E00;
+letter-spacing: 0.64px;
+}
+
+.da .right .right_ri .gouwu{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.da .right .right_ri .gouwu .gou{
+font-size: 24rpx;
+color: #9F9F9F;
+letter-spacing: -0.27px;
+}
+.queding{
+  width: 100%;
+  height: 100rpx;
+  background: #F1B22F;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  letter-spacing: 0.54rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

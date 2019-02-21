@@ -1,0 +1,16 @@
+<loading hidden="{{chanpin && chaner}}">
+        加载中...
+</loading>
+<view class='da'>
+  <view class='left'>
+    <view  wx:for="{{chanpin}}" wx:key="index" class='left_li {{change==index?"active":""}}' bindtap='xuan' data-index="{{index}}" data-typeid="{{item.type_id}}">{{item.type_name}}</view>
+  </view>
+  <view class='right'>
+    <view class='right_li' wx:for="{{chaner}}" wx:key="index" bindtap='chaner'  data-typeid="{{item.one_type_id}}" data-twotypeid="{{item.two_type_id}}" data-type="{{item.is_type}}" data-nochuan="2" data-name="{{item.type_name}}">
+      <view class='tu'  style="background:url({{item.type_img}}) no-repeat;background-size:100% 100%;">
+        <!-- <image src='{{item.type_img}}'></image> -->
+      </view>
+      <view class='wen'>{{item.type_name}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+/* pages/tuixiang/tuixiang.wxss */
+.goods_commend_content{
+  font-size: 30rpx;
+  color: #4D4C4C;
+  letter-spacing: 1.37rpx;
+}
+.da{
+  width: 94%;
+  margin: auto;
+}

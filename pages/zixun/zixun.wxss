@@ -1,0 +1,36 @@
+/* pages/zixun/zixun.wxss */
+.news_title{
+  font-size: 36rpx;
+  color: #303030;
+  letter-spacing: 0.69px;
+  text-align: center;
+}
+.news_time{
+  font-size: 32rpx;
+  color: #9C9C9C;
+  letter-spacing: 0.61px;
+  text-align: center;
+}
+.news_msg{
+  font-size: 30rpx;
+  color: #4D4C4C;
+  letter-spacing: 1.37px;
+  line-height: 48px;
+}
+.wxParse-section view{
+  font-size: 30rpx;
+color: #4D4C4C;
+letter-spacing: 1.37rpx;
+}
+.wxParse-p view{
+  font-size: 30rpx;
+color: #4D4C4C;
+letter-spacing: 1.37rpx;
+}
+.wxParse-p{
+  margin-top: 14rpx;
+}
+.da{
+  width: 94%;
+  margin: auto;
+}

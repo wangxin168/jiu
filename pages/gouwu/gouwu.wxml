@@ -1,0 +1,59 @@
+<wxs module="filters" src="../../cal.wxs"></wxs>
+<view class='chang' wx:if="{{yincang==2}}">
+  <view class='da' wx:for="{{gouwu}}" wx:key="index">
+  <view class='left'>
+    <checkbox-group bindchange="bindCheckbox" data-index="{{index}}">
+      <label class="checkbox">
+        <checkbox value="" checked="{{item.checks}}" />
+      </label>
+    </checkbox-group>
+  </view>
+  <view class='right'>
+    <view class='right_le' style='background:url({{item.goods_img}}) no-repeat;background-size:100%;'></view>
+    <view class='right_ri'>
+      <view class='title'>{{item.goods_name}}</view>
+      <view class='jie'>{{item.goods_point}}</view>
+      <view class='price'>￥{{item.goods_price}}</view>
+      <view class='gouwu'>
+        <view style='width:65%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;'>
+          <text class='gou'>规格:{{item.goods_spec}}</text>
+          <text class='gou' style='margin-left:10rpx;'>数量:{{item.goods_stock}}</text>
+        </view>
+        <view style='display:flex;width:34%;'>
+          <text style='width:35.5rpx;height:34.1rpx;' class='hui'bindtap='jian' data-goodid="{{item.goods_id}}" data-price="{{item.goods_price}}" data-index="{{index}}">-</text>
+          <text style='width:56rpx;height:34.1rpx;color: #040404;' class='hui'>{{item.goods_num}}</text>
+          <text style='width:35.5rpx;height:34.1rpx;' class='hui' bindtap='add' data-goodid="{{item.goods_id}}" data-index="{{index}}" data-price="{{item.goods_price}}">+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
+<view class='di' wx:if="{{yincang==2}}">
+  <view class='check'>
+    <checkbox-group bindchange="bindSelectAll" >
+      <label class="checkbox">
+        <checkbox value="" checked='{{selectedAllStatus}}' />
+      </label>
+    </checkbox-group>
+    <view>全选</view>
+  </view>
+  <view class='heji'>合计金额：￥{{filters.toFix(totalPrice)}}</view>
+  <view class='jiesuan' bindtap='jiesuan'>去结算</view>
+</view>
+<image src='/img/shangou.png' class='shanchu' bindtap='del' wx:if="{{yincang==2}}"></image>
+<view wx:if="{{yincang==1}}" class='kong' style='height="{{height}}"'>
+  <view style='margin-top:200rpx;'><image src='/img/gouwuche.png'></image></view>
+  <view style='margin-top:70rpx;'>购物车为空</view>
+  <view>再忙也要犒劳自己</view>
+</view>
+<view class='delete' wx:if="{{delete==1}}">
+  <view class='queshan'>
+    <view class='queren'>
+      <view class='queren_ma'>确定要删除这1种商品吗？</view>
+      <view class='queren_que'  bindtap='shan'>确定</view>
+    </view>
+    <view class='qvxiao' bindtap='qvxiao'>取消</view>
+  </view>
+</view>

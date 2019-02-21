@@ -1,0 +1,13 @@
+<view class='phoneBox'>
+    <view class="trip">请填写旧手机号码</view>
+    <form bindsubmit="formSubmit">
+        <view class='formLine'>
+              <input type='number' name="tel" placeholder='17090051724' placeholder-style="color:#C2C2C2;font-size:28rpx;"></input>
+        </view>
+        <view class='formLine'>
+              <input type='password' name="pass" placeholder='请输入登陆密码' placeholder-style="color:#C2C2C2;font-size:28rpx;"></input>
+        </view>
+        <button formType="submit">下一步</button>
+    </form>
+</view>
+  

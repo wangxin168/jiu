@@ -1,0 +1,197 @@
+/* pages/dingxiang/dingxiang.wxss */
+.da{
+  width: 100%; 
+  min-height: 100%;
+  background-color: #F3F3F3;
+  overflow: hidden;
+}
+.da .shou{
+  width: 98%;
+  margin: 9rpx auto;
+  background: white;
+  /* height: 169rpx; */
+  padding: 16rpx 42rpx 24rpx 27rpx;
+  box-sizing: border-box;
+}
+.da .shou .ming{
+  font-size: 30rpx;
+  color: #303030;
+  display: flex;
+  justify-content: space-between;
+}
+.da .shou .dizhi{
+  font-size: 26rpx;
+  color: #303030;
+  margin-top: 13rpx;
+}
+.bai{
+  width: 98%;
+  margin: auto;
+  background: white;
+}
+.chaner{
+  width: 96%;
+  height: 234rpx;
+  margin-left: 4%;
+  border-bottom: 1px solid #EFEFEF;
+  display: flex;
+  padding: 20rpx 17rpx 24rpx 0;
+  box-sizing: border-box;
+}
+.chaner .tu image{
+  width: 246rpx;
+  height: 183rpx;
+}
+.chaner .wen{
+  width: 65%;
+  margin-left: 2%;
+}
+.chaner .wen .goods_name{
+  width: 100%;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 1.17px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+}
+.chaner .wen .goods_point{
+  width: 100%;
+  font-size: 26rpx;
+  color: #9F9F9F;
+  letter-spacing: 0.46px;
+  margin-top: 7rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.chaner .wen .goods_price{
+  font-size: 36rpx;
+color: #F21E00;
+letter-spacing: 0.64px;
+margin-top: 7rpx;
+}
+.chaner .wen .liang{
+  font-size: 24rpx;
+color: #9F9F9F;
+letter-spacing: 0.43px;
+margin-top: 9rpx;
+display: flex;
+}
+.youhui{
+  width: 96%;
+  margin-left: 4%;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 0.54px;
+  height: 95rpx;
+  line-height: 95rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3% 0 0;
+  border-bottom: 1rpx solid  #EEEEEE;
+  box-sizing: border-box;
+}
+.textarea{
+  width: 96%;
+  height: 95rpx;
+  margin-left: 4%;
+  display: flex;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 0.54rpx;
+}
+.textarea text{
+  line-height: 75rpx;
+  width: 100rpx;
+}
+.textarea textarea{
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 75rpx;
+}
+.xian{
+  width: 100%;
+  height: 20rpx;
+  background: #F8F8F8;
+}
+.di{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+}
+.di .jine{
+  width: 70%;
+  height: 100rpx;
+  background: white;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 0.54px;
+  text-align: left;
+  padding: 0 0 0 4%;
+  box-sizing: border-box;
+}
+.di .zhifu{
+  width: 30%;
+  height: 100rpx;
+  background: #F1B22F;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #fff;
+  letter-spacing: 0.54px;
+  text-align: center;
+}
+checkbox .wx-checkbox-input{
+   width: 48rpx; /* 背景的宽 */
+   height: 48rpx; /* 背景的高 */
+   color:#000;
+   border-radius: 50%;/* 圆角 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked{
+   border: none;
+   background: orange;
+   color:#000;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 48rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 48rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 48rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   color:#000;
+}
+.xian{
+  width: 100%;
+  height: 20rpx;
+  background: #F8F8F8;
+}
+.zhifang{
+  width: 96%;
+  margin-left: 4%;
+  display: flex;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+  height: 116rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.zhifang .left{
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #040404;
+  letter-spacing: 0.54rpx;
+}
+

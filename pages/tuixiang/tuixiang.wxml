@@ -1,0 +1,8 @@
+<!--pages/tuixiang/tuixiang.wxml-->
+<!-- <text>pages/tuixiang/tuixiang.wxml</text> -->
+<view class='da'>
+  <import src="../../wxParse/wxParse.wxml"/>
+<!-- <view class='goods_commend_content'>{{xiangqing.goods_commend_content}}</view> -->
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>
+

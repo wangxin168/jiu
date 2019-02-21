@@ -1,0 +1,167 @@
+/* pages/addxin/addxin.wxss */
+
+.da{
+  width: 100%;
+  background: white;
+  border-top: 1rpx solid #D8D8D8;
+}
+.da .li{
+  min-height: 96rpx;
+  width: 96%;
+  margin-left: 4%;
+  border-bottom: 1rpx solid #EAEAEA;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #303030;
+  justify-content: space-between;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+}
+.da .li input{
+  width: 100%;
+  font-size: 30rpx;
+  color: #A2A2A2;
+}
+.place-holder{
+  font-size: 30rpx;
+  color: #A2A2A2;
+}
+.xian{
+  width: 100%;
+  height: 20rpx;
+  background:  #F8F8F8;
+}
+.cun{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background: #f1b22f;
+  font-size: 30rpx;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+}
+/* pages/gouwu/gouwu.wxss */
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   width: 53rpx; /* 背景的宽 */
+   height: 53rpx; /* 背景的高 */
+   color:#000;
+   border-radius: 50%;/* 圆角 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked{
+   border: none;
+   background: orange;
+   color:#000;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 53rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 53rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 53rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   color:#000;
+}
+/* model.wxss */
+page{
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+.infoText{
+    margin-top: 20rpx;
+    text-align: center;
+    width: 100%;
+    justify-content: center; 
+}
+
+.centerText{
+  margin-top: 100rpx;
+  width: 100%;
+  text-align: center;
+}
+
+/* --------------分割线------------- */
+
+picker-view{
+  background-color: white;
+  padding: 0;
+  width: 100%; 
+  height: 380rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+picker-view-column view{
+  vertical-align:middle; 
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-element-wrapper {
+  display: flex;  
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 470rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-button {
+  margin-top: 20rpx;
+  top:20rpx;
+  width: 400rpx;
+  height: 100rpx; 
+  line-height: 100rpx; 
+  align-items:center;
+}
+
+
+.animation-element text{
+  color: #999999;
+  display: inline-flex;  
+  position: fixed;
+  margin-top: 20rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-bt{
+  left: 30rpx;
+}
+.right-bt {
+  right: 30rpx;
+}
+
+.line{
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx; 
+  background-color: #eeeeee;
+}

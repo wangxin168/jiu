@@ -1,0 +1,24 @@
+<button class='cun' form-type='submit' bindtap='addxin'>添加新地址</button> 
+<view class='address' wx:for="{{address}}" wx:key="index" wx:for-index="bindex">
+  <view class='xinxi' bindtap='chuancan'  data-id="{{bindex}}" >
+    <view class='name'><text class='username'>{{item.user_name}}</text><text class='mobile'  style='margin-left:20rpx;'>{{item.user_mobile}}</text></view> 
+    <view class='dizhi'><text wx:if="{{item.is_default==1}}"><image src='/img/moren.png'></image></text> <text style='margin-left:20rpx;'>{{item.province_val}}</text><text style='margin-left:20rpx;'>{{item.city_val}}{{item.district_val}}{{item.user_address}}</text></view>
+  </view>
+  <view class='moren'>
+    <view wx:if="{{item.is_default==1}}" class='mo'>
+      <image src='/img/gou.png' style='width:39rpx;height:39rpx; margin-right:10rpx;display:block;'></image>
+      <text>已设为默认</text>
+    </view>
+    <view class='caozuo'>
+      <view bindtap='bianji' data-addressid="{{item.id}}" >
+        <image src='/img/bianji.png' style='width:30rpx;height:30rpx;'></image>
+        <text>编辑</text>
+      </view>
+      <text></text>
+      <view bindtap='shanchu' data-addressid="{{item.id}}">
+        <image src='/img/shanchu.png' style='width:25rpx;height:25rpx;'></image>
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>

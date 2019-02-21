@@ -1,0 +1,17 @@
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:25rpx 30rpx;
+  background: #fff;
+  font-size: 28rpx;
+  border-bottom:1rpx solid #F5F5F5;
+}
+.setBox>button{
+  background: #F1B22F;
+  color:#fff;
+  font-size: 28rpx;
+  width:95%;
+  margin:200rpx auto;
+  padding:7rpx 0;
+}

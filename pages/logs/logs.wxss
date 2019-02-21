@@ -1,0 +1,49 @@
+.da{
+  width: 100%;
+  display: flex;
+}
+.da .left{
+  width: 25%;
+  height: 94rpx;
+  line-height: 94rpx;
+  font-size: 26rpx;
+}
+.da .left .left_li{
+  text-align: center;
+  border-right: 1px solid #f5f5f5;
+  position: relative;
+  color:#7A7A7A;
+}
+.da .left .left_li.active{
+  color:#000;
+}
+.da .left .left_li.active:after{
+  content:"";
+  width:10rpx;
+  height: 30rpx;
+  background: #F1B22F;
+  position: absolute;
+  top:50%;
+  left:0;
+  transform: translateY(-50%);
+}
+.da .right{
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+.da .right .right_li{
+  width: 33.3%;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.da .right .right_li .tu{
+  width: 150rpx;
+  height: 150rpx;
+  margin: auto;
+}
+.da .right .right_li .wen{
+  font-size: 22rpx;
+  color: #4a4a4a;
+  margin-top: 37rpx;
+}

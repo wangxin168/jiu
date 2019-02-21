@@ -1,0 +1,7 @@
+<view class='setBox'>
+      <view class="item" bindtap='aboutFun'>
+          <text>关于我们</text>
+          <i class="iconfont icon-htbArrowright"></i>
+      </view>
+      <button bindtap='clearInfo'>退出登录</button>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/newsdetails/newsdetails.wxml-->
+<!-- <text>pages/newsdetails/newsdetails.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='da'>
+  <view class='title'>{{letter_list.letter_title}}</view>
+  <view class='time'>{{letter_list.letter_time}}</view>
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>

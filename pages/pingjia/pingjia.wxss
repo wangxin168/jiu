@@ -1,0 +1,86 @@
+/* pages/pingjia/pingjia.wxss */
+textarea{
+  width: 100%;
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #CACACA;
+  letter-spacing: -0.4rpx;
+  height: 264rpx;
+  background: #F9F9F9;
+  padding: 4% 3%;
+  box-sizing: border-box;
+}
+.shi{
+  width: 96%;
+  margin-left: 4%;
+  margin-top: 17rpx;
+  display: flex;
+}
+.shi .shizi{
+  width: 157rpx;
+  height: 158rpx;
+}
+.shi .chuantu{
+  position: relative;
+  width: 157rpx;
+  height: 158rpx;
+}
+.shi .chuantu .tu{
+  width: 157rpx;
+  height: 158rpx;
+}
+.tian{
+  width: 96%;
+  margin-left: 4%;
+  margin-top: 88rpx;
+  font-size: 30rpx;
+color: #3C3C3C;
+}
+button{
+  width: 625rpx;
+  height: 99rpx;
+  background: linear-gradient(-90deg, #F1B22F 0%, #FDCD69 100%);
+  border-radius: 49.5px;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 99rpx;
+  margin-top: 116rpx;
+}
+button::after{
+  border:none;
+}
+.cha{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+}
+.cha image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.right{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.right .star {
+  float: left;
+  width: 54rpx;
+  height: 54rpx;
+  text-align: center;
+  line-height: 54rpx;
+  padding: 48rpx 2rpx;
+  margin-left: 4%;
+}
+.right .wen{
+  margin-left: 60rpx;
+  font-size: 28rpx;
+  color:#3C3C3C;
+}
+.star image{
+  width: 48rpx;
+  height: 48rpx;
+}

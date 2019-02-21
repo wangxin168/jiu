@@ -1,0 +1,26 @@
+<!--pages/dingfu/dingfu.wxml-->
+<!-- <text>pages/dingfu/dingfu.wxml</text> -->
+<view class='jine'>
+  <image src='/img/zhifudi.png'></image>
+  <view class='wen'>
+    <view class='qian'>￥{{jine}}</view>
+    <view class='zi'>订单需要支付金额</view>
+  </view>
+</view>
+<view class='xian'></view>
+<view class='zhifang'>
+      <view class='left'>
+        <view><image src='/img/weixin.png' style='width:43rpx;height:43rpx;'></image></view>
+        <view>微信支付</view>
+      </view>
+      <view class='right'>
+        <checkbox-group bindchange="weixin">
+          <label class="checkbox">
+            <checkbox value="" checked="{{weixin}}" />
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+    <view class='zhifu' bindtap='zhifu'>
+      立即支付
+    </view> 

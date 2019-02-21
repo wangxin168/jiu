@@ -1,0 +1,19 @@
+/* pages/sange/sange.wxss */
+.san_ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.san_ul .san_li{
+  width: 33.3%;
+  text-align: center;
+  margin-top: 44rpx;
+}
+.san_ul .san_li .shang image{
+  width: 142rpx;
+  height: 89rpx;
+}
+.san_ul .san_li .xia{
+  font-size: 28rpx;
+  color: #909090;
+}

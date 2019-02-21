@@ -1,0 +1,31 @@
+/* pages/success/success.wxss */
+.da{
+  width: 100%;
+}
+.tong{
+  width: 224rpx;
+  height: 224rpx;
+  display: block;
+  margin: 200rpx auto 30rpx;
+}
+.da view{
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #303030;
+}
+.pao{
+  width: 67%;
+  display: flex;
+  justify-content: space-between;
+  margin: 100rpx auto;
+}
+.pao view{
+  width: 220rpx;
+  height: 82rpx;
+  text-align: center;
+  line-height: 82rpx;
+  border: 1px solid #242424;
+  font-size: 30rpx;
+  color: #242424;
+}

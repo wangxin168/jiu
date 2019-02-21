@@ -1,0 +1,147 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='banner'>
+  <swiper indicator-dots="{{indicatorDots}}" style='height:{{imgHeight}}rpx;' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{shopxiang.goods_img_thumb_list}}" wx:key="index">
+      <swiper-item style="background:url({{item.img_url}}) no-repeat;background-size:100% 100%;">
+        <!-- <image src="{{item.img_url}}" class="slide-image" mode='aspectFill'/> -->
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='jia'>￥{{shopxiang.goods_price}}</view>
+<view class='da'>
+  <view class='title'>{{shopxiang.goods_name}}</view>
+  <button open-type='share' class='shareBtn'>
+    <i class="iconfont icon-fenxiang"></i>分享
+  </button>
+</view>
+<view class='con'>{{shopxiang.goods_point}}</view>
+<view class='yunfei'>
+  <view>运费：{{shopxiang.goods_ex_price}}元</view>
+  <view>库存：{{shopxiang.goods_stock}}</view>
+  <view>销量：{{shopxiang.goods_sales}}笔</view>
+</view>
+<view class='xian'></view>
+<view class='guige'>
+  <view>规格：{{shopxiang.goods_spec}}</view>
+  <view style='opacity: 0'>111111111</view>
+  <view style='opacity: 0'>222222222</view>
+</view>
+<view class='xian'></view>
+<view class='gouwu'>
+  <view class='gou'>购买数量</view>
+  <view style='display:flex;'>
+    <text style='width:59rpx;height:56rpx;' class='hui' bindtap='jian'>-</text>
+    <text style='width:93rpx;height:56rpx;color: #040404;' class='hui' value="{{num}}">{{num}}</text>
+    <text style='width:59rpx;height:56rpx;' class='hui' bindtap='add'>+</text>
+  </view>
+</view>
+<view class='xian'></view>
+
+<!-- tab  切换 -->
+<view class="swiper-tab">
+  <text bindtap="swichNav" data-idx="1" class='{{currentTab==1?"active":""}}'>商品</text>
+  <text bindtap="swichNav" data-idx="2" class='{{currentTab==2?"active":""}}'>详情</text>
+  <text bindtap="swichNav" data-idx="3" class='{{currentTab==3?"active":""}}'>评价</text>
+</view>
+
+<view class="swiper-box" wx:if="{{currentTab==1}}">
+  <!-- 商品 -->
+  <view class='goodsPage'>
+    <view id='block_2'>
+      <view class='shang'>
+        <text class='xiao'></text>
+        <text class='wen'>相关推荐</text>
+        <text class='xiao'></text>
+      </view>
+      <view class='lie'>
+        <view class='lie_li' wx:for="{{commend_goods_list}}" wx:key="index">
+          <view class='tu' bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="4" data-goodname="{{item.goods_name}}">
+            <image src='{{item.goods_img_thumb}}' mode='widthFix'></image>
+          </view>
+          <view class='wen'>
+            <view class='goods_name'>{{item.goods_name}}</view>
+            <view class='goods_point'>{{item.goods_point}}</view>
+            <view class='goods_spec'>规格：{{item.goods_spec}}</view>
+            <view class='jia'>
+              <text class='goods_price'>￥{{item.goods_price}}</text>
+              <i class="iconfont icon-qicheqianlian-1-copy" bindtap='addgouwu' data-goodid="{{item.goods_id}}"></i>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 详情 -->
+<view class="swiper-box" wx:if="{{currentTab==2}}">
+  <!-- 商品 -->
+  <view class='goodsPage'>
+    <view id='block_1' wx:if="{{shopxiang.goods_content!=''}}">
+      <view class='shang'>
+        <text class='xiao'></text>
+        <text class='wen'>商品信息</text>
+        <text class='xiao'></text>
+      </view>
+      <template is="wxParse" data="{{wxParseData:contents.nodes}}" />      </view>
+  </view>
+</view>
+<!-- 评价 -->
+<view class="swiper-box" wx:if="{{currentTab==3}}">
+  <!-- 商品 -->
+  <view class="swiper-item">
+    <view class='ping'>
+      <view class='pingjia' wx:for="{{ping}}" wx:key="index" wx:for-item="cell">
+        <view class='fensan' >
+          <view class='user'>
+            <view class='userimg'>
+              <image src='{{cell.user_head_img}}'></image>
+            </view>
+            <view class='name'>{{cell.user_nickname}}</view>
+          </view>
+          <!-- 星星 -->
+          <view class='xing'>
+            <image wx:for="{{ping.length}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" src='/img/xuanzhong.png' style='width:40rpx;height:40rpx;' wx:if="{{idx<cell.star_num}}" data-nums="{{cell.star_num}}"></image>
+          </view>
+        </view>
+        <view class='time'>{{cell.comment_time}}</view>
+        <view class='con'>{{cell.comment_content}}</view>
+        <view class='tu'>
+          <view wx:for="{{cell.comment_img_list}}" wx:key="index">
+            <image src='{{item}}' mode='widthFix'></image>
+          </view>
+        </view>
+      </view>
+      <view class='xian'></view>
+    </view>
+  </view>
+</view>
+<view style='width:100%;height:1rpx;background:white' wx:if="{{chang==1}}"></view>
+<!-- 底部 -->
+<view class='bottomLine'>
+  <view class='left'>
+    <view class='colls' bindtap='shoucang'>
+      <i class="iconfont icon-shoucang" wx:if="{{is_shou==2}}"></i>
+      <i class="iconfont icon-shoucang11" wx:if="{{is_shou==1}}"></i>
+      <text>{{is_shou==2?"加入收藏":"取消收藏"}}</text>
+    </view>
+    <view class='custs' style='margin-top:8rpx;'>
+       <button class="cs_button" session-from="7moor|{{zhongxin.user_nickname==userInfo.nickName}}|{{zhongxin.user_head_img==userInfo.avatarUrl}}" open-type="contact" session-from="weapp">
+                <image class="cs_image" src="/img/ke.png" style='width: 54rpx;height: 54rpx;'></image>
+              </button>
+      <text>客服</text>
+    </view> 
+    <view class='shopCar' bindtap='gouwuche' style='margin-top:8rpx;'>
+      <i class="iconfont icon-qicheqianlian-1-copy1" style="font-size:45rpx!important;"></i>
+      <text style='margin-bottom:20rpx;'>购物车</text>
+    </view>
+  </view>
+  <view class='right'>
+    <view class='lv' bindtap='addshop'>
+      加入购物车
+    </view>
+    <view class='huang' bindtap='queding' data-goodid="{{shopxiang.goods_id}}">
+      立即购买
+    </view>
+  </view>
+</view>

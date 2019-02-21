@@ -1,0 +1,130 @@
+@import'../../icon.wxss';
+html{
+  width: 100%;
+  height: 100%;
+  background: #F9F9F9;
+}
+.duoduo{
+  background: linear-gradient(-180deg, #D9E3F0 0%, #DBE2EF 100%);
+  height: 220rpx;
+}
+.duoduo .xiaoxi{
+  width: 92%;
+  margin: auto;
+  text-align: right;
+}
+.duoduo .xiaoxi image{
+  width: 39rpx;
+  height: 37rpx;
+  /* margin-left: 73%; */
+}
+.xinxi{
+  width: 86%;
+  margin: auto;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  box-sizing: border-box;
+}
+.xinxi .touxiang image{
+  width: 119rpx;
+  height: 119rpx;
+  border-radius: 50%;
+}
+.xinxi .tel{
+  margin-left: 31rpx;
+  width: 59%;
+}
+.xinxi .tel .nickname{
+  font-size: 32rpx;
+  color: #444444;
+  letter-spacing: 1.4rpx;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+}
+.xinxi .qian{
+  text-align: center;
+  margin-left: 3%;
+  width: 110rpx;
+}
+.xinxi .qian image{
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+  margin: auto;
+}
+.xinxi .xian{
+  width: 4rpx;
+  height: 78rpx;
+  background: white;
+  /* margin-left: 26%; */
+}
+.xinxi .qian .wen{
+  font-size: 28rpx;
+  color: #454545;
+  letter-spacing: 1.05px;
+  text-align: center;
+}
+
+.qinbao{
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #E6E6E6;
+  font-size: 30rpx;
+  color: #383838;
+}
+.fuli{
+  width: 100%;
+  height: 163rpx;
+  display: flex;
+  padding: 35rpx 0 25rpx;
+  box-sizing: border-box;
+}
+.fuli .fuli_li{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 116rpx;
+}
+.fuli .fuli_li i{
+  font-size: 45rpx;
+  display: inline-block;
+}
+.fuli .fuli_li image{
+  width: 41rpx;
+  height: 41rpx;
+  display: inline-block;
+}
+.fuli .fuli_li view{
+  font-size: 26rpx;
+color: #717171;
+/* letter-spacing: 1.67rpx; */
+margin-top: 23rpx;
+}
+.hui{
+  width: 100%;
+  height: 30rpx;
+  background: #f9f9f9;
+}
+
+.cs_button {
+  background-color: #fff;
+  border: none !important;
+  height: 48rpx;
+  width: 53rpx;
+  line-height: 54rpx;
+  text-align: center;
+  padding: 0;
+}
+.cs_button::after {
+  border: 0;
+}

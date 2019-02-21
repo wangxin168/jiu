@@ -1,0 +1,29 @@
+<view class='da'>
+  <view class='wei' wx:for="{{shuzuzu}}" wx:key="index">
+    <image src='/img/weishiyong.png' wx:if="{{goodsTotals>item.coupon_condition}}"></image>
+    <image src='/img/bukeyong.png' wx:if="{{goodsTotals<=item.coupon_condition}}"></image>
+    <view class='left' wx:if="{{item.is_type==1}}">
+      <view class='qian'>{{item.coupon_price}}</view>
+      <view class='wen'>通用红包</view>
+    </view>
+    <view class='left' wx:if="{{item.is_type==2}}">
+      <view class='qian'>{{item.coupon_price}}</view>
+      <view class='wen'>满{{item.coupon_condition}}可用</view>
+    </view>
+
+    <view class='right'>
+      <view class='shang'>
+        <view class='tongman' wx:if="{{item.is_type==1}}">通用优惠券</view>
+        <view class='tongman' wx:if="{{item.is_type==2}}">满减优惠券</view>
+        <view class='qv' bindtap='shiyong' data-coupon="{{item.coupon_grant_id}}" data-name="{{item.coupon_name}}" data-price="{{item.coupon_price}}" data-condition="{{item.coupon_condition}}" wx:if="{{goodsTotals>item.coupon_condition}}">去使用</view>
+        <view class='qv' style='background:#fff; color:red;' wx:if="{{goodsTotals<=item.coupon_condition}}">不可用</view>
+
+      </view>
+      <view class='xia'>
+        有效期至{{item.expiration_time}}
+      </view>
+    </view>
+    <view class='jinxian'>该优惠券仅限自己账号可以用</view>
+  </view>
+</view>
+<button bindtap='bushiyong' class='qvxiao'>取消使用</button>

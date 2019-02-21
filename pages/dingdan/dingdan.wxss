@@ -1,0 +1,227 @@
+/* pages/dingdan/dingdan.wxss */
+
+.swiper-tab{
+	width: 100%;
+	border-bottom: 2rpx solid #E8E8E8;
+	text-align: center;
+  height: 89rpx;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: white;
+}
+.swiper-tab-list{  
+  display: inline-block;
+	font-size: 30rpx;
+  color: #414141;
+  letter-spacing: 0.54px;
+  height: 86rpx;
+	line-height: 80rpx;
+}
+.on{
+	border-bottom: 5rpx solid #F1B22F;
+}
+.swiper-box{ 
+  display: block;
+  /* height: 100%;  */
+  width: 100%; 
+  overflow: hidden; 
+  min-height: 100%;
+  background-color: #F8F8F8;
+  margin-top: 89rpx;
+  z-index: 1;
+}
+.fukuan{
+  width: 100%;
+  /* height: 405rpx; */
+  margin-top: 10rpx;
+  background: white;
+}
+.fukuan .wupin{
+  width: 100%;
+  border-bottom: 1rpx solid #ECECEC;
+  max-height: 260rpx;
+  padding: 24rpx 3%;
+  display: flex;
+}
+.fukuan .wupin .tu{
+  width: 187rpx;
+  height: 187rpx;
+  /* background: #F8F9FB; */
+  overflow: hidden;
+}
+.fukuan .wupin .tu image{
+  width: 187rpx;
+  height: 187rpx;
+  /* margin-top: 20%; */
+  display: block;
+  margin: 20% auto;
+}
+.fukuan .wupin .right_ri{
+  margin-left: 5%;
+  width: 70%;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+}
+.fukuan .wupin .right_ri .title{
+  width: 100%;
+font-size: 30rpx;
+color: #040404;
+letter-spacing: 1.17px;
+overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.fukuan .wupin .right_ri .jie{
+  width: 100%;
+font-size: 26rpx;
+color: #9F9F9F;
+letter-spacing: 0.46px;
+margin-top: 10rpx;
+overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.fukuan .wupin .right_ri .price{
+font-size: 34rpx;
+color: #464646;
+letter-spacing: 0.61px;
+margin-top: 10rpx;
+}
+
+.fukuan .wupin .right_ri .gouwu{
+  width: 100%;
+  margin-top: 5rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.fukuan .wupin .right_ri .gouwu .gou{
+font-size: 24rpx;
+color: #9F9F9F;
+letter-spacing: 0.43px;
+}
+.fukuan .wupin .right_ri .gouwu .ping{
+  width: 117rpx;
+  height: 45rpx;
+  border: 1px solid #F56969;
+  font-size: 24rpx;
+  color: #F56969;
+  letter-spacing: 0.43px;
+  line-height: 45rpx;
+  text-align: center;
+}
+.fukuan .all{
+  width: 100%;
+  height: 67rpx;
+  border-bottom: 1rpx solid #ECECEC;
+  line-height: 67rpx;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+.fukuan .all view{
+  float: right;
+  font-size: 26rpx;
+color: #5D5D5D;
+}
+.fukuan .fuan{
+  width: 100%;
+  height: 102rpx;
+  display: flex;
+  align-items: center;
+  flex-direction:row-reverse;
+  padding: 0 4%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #F56969;
+  letter-spacing: 0.5px;
+}
+.fukuan .fuan view{
+  width: 160rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.fukuan .fuan .qv{
+  color: #4A4A4A;
+  border: 1rpx solid #8E8E8E;
+  margin-left: 25rpx;
+}
+.fukuan .fuan .fu{
+  color: #F56969;
+  border: 1rpx solid #F56969;
+  margin-left: 15rpx;
+}
+.fukuan .fuan .tui{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 57rpx;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 0;
+  background: white;
+  z-index: 1;
+  margin-left: 25rpx;
+  margin-right: 0;
+  border-radius: 0;
+  border: 1rpx solid #8E8E8E;
+}
+button::after{
+  border-radius: none;
+  border:none;
+}
+.delete{
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  background: rgba(0,0,0,0.30);
+  top: 0;
+  left: 0;
+}
+.delete .queshan{
+  width: 100%;
+  height: 350rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.delete .queshan .queren{
+  background: #FFFFFF;
+  border-radius: 10rpx;
+  width: 94%;
+  height: 222rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: auto;
+}
+.delete .queshan .queren .queren_ma{
+  font-size: 28rpx;
+  color: #7C7C7C;
+  letter-spacing: 1.05rpx;
+  height: 111rpx;
+}
+.delete .queshan .queren .queren_que{
+  font-size: 34rpx;
+color: #FF1818;
+letter-spacing: 1.27rpx;
+border-top: 1rpx solid #D8D8D8;
+height: 111rpx;
+}
+.delete .qvxiao{
+  font-size: 34rpx;
+color: #0F6FF1;
+letter-spacing: 1.27rpx;
+height: 105rpx;
+background: white;
+text-align: center;
+line-height: 105rpx;
+margin: 22rpx auto 0;
+width: 94%;
+border-radius: 10rpx;
+}

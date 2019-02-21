@@ -1,0 +1,89 @@
+<wxs module="filters" src="../../cal.wxs"></wxs>
+<view class='da'  style='height:{{winHeight}}px'>
+  <view class='shou' bindtap='dizhi'>
+    <view class='ming'>
+      <text>收货人：{{address_info.user_name}}</text>
+      <!-- <text >{{userNames}}</text> -->
+      <text>{{address_info.user_mobile}}</text>
+    </view>
+    <view class='dizhi' >收货地址：{{address_info.province_val}}{{address_info.city_val}}{{address_info.district_val}}{{address_info.user_address}}</view>
+    <!-- <view class='dizhi' wx:if="{{is_default==2}}">请选择收货地址</view> -->
+  </view>
+  <view class='bai'>
+    <view class='chaner'>
+      <view class='tu'>
+        <image src='{{queshop.goods_img_thumb}}'></image>
+      </view>
+      <view class='wen'>
+        <view class='goods_name'>{{queshop.goods_name}}</view>
+        <view class='goods_point' >{{queshop.goods_point}}</view>
+        <view class='goods_price' wx:if="{{queshop.is_discount==2}}">￥{{queshop.goods_price}}</view>
+        <view class='goods_price' wx:if="{{queshop.is_discount==1}}">￥{{queshop.goods_discount_price}}</view>
+        <view class='liang'>
+          <view style='width:92%;'>
+            <text>规格：{{queshop.goods_spec}}</text>
+            <text style='margin-left:30rpx;'>数量：{{queshop.goods_stock}}</text>
+          </view>
+          <view>×{{queshop.goods_num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='xian'></view>
+  <view class='bai'>
+    <view class='youhui' bindtap='willquan' wx-if="{{checked==false}}">
+      <text>优惠券</text>
+      <text wx:if="{{coupon==''}}">有{{length}}张优惠券可用></text>
+      <text wx:else="{{coupon!=''}}">{{name}}</text>
+    </view>
+    <view class='youhui' wx-if="{{checked==true}}" bindtap='tixing'>
+      <text>优惠券</text>
+      <text wx:if="{{coupon==''}}">有{{length}}张优惠券可用></text>
+      <text wx:else="{{coupon!=''}}">{{name}}</text>
+    </view>
+    <view class='youhui'>
+      <text>可抵扣{{order_info.order_score}}积分(100积分=1元)</text>
+      <view>
+        <checkbox-group bindchange="bindCheckbox">
+          <label class="checkbox">
+            <checkbox value="" checked="{{checked}}" />
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+    <view class='youhui'>
+      <text>快递费</text>
+      <text>￥{{queshop.goods_ex_price}}</text>
+    </view>
+    <view class='textarea'>
+      <text>备注:</text>
+      <textarea class="input" name="beizhu" bindinput ="userNameInput"></textarea>
+    </view>
+    <view class='xian'></view>
+    <view class='zhifang'>
+      <view class='left'>
+        <view><image src='/img/weixin.png' style='width:43rpx;height:43rpx;'></image></view>
+        <view>微信支付</view>
+      </view>
+      <view class='right'>
+        <checkbox-group bindchange="weixin">
+          <label class="checkbox">
+            <checkbox value="" checked="{{weixin}}" />
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+  <view class='di'>
+    <view class='jine' wx:if="{{coupon!=''}}">合计金额：{{filters.toFix(order_price)}}元</view>
+    <view class='jine' wx:if="{{is_use_score=='1'&&order_info.order_score>=100}}">合计金额：{{order_info.order_price-1}}元</view>
+    <view class='jine' wx:if="{{is_use_score=='1'&&order_info.order_score<100}}">合计金额：{{order_info.order_price}}元</view>
+    <view class='jine' wx:if="{{coupon==''&&is_use_score=='2'}}">合计金额：{{order_info.order_price}}元</view>
+    <view class='zhifu' bindtap='zhifu'>
+      立即支付
+    </view>
+  </view>
+  
+  
+</view>
+

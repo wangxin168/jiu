@@ -1,0 +1,173 @@
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}" data-tid="{{idx}}" bindtap="swichNav" wx:for="{{navtab}}" wx:key="index" wx:for-index="idx" data-goodid="{{shopxiang.goods_id}}">{{item}}</view>
+</view>
+
+<view class="swiper-box">
+
+  <view class="swiper-item" wx:if="{{currentTab=='0'}}">
+    <view class='fukuan' wx:for="{{fukuan}}" wx:key="index" wx:for-item="cell">
+      <view class='wupin' wx:for="{{cell.goods_list}}" wx:key="index" wx:for-item="item">
+        <view class='tu' style='background:url({{item.goods_img}}) no-repeat;background-size:100% 100%;'>
+          <!-- <image src='{{item.goods_img}}'></image> -->
+        </view>
+        <view class='right_ri'>
+          <view class='title'>{{item.goods_name}}</view>
+          <view class='jie'>{{item.goods_point}}</view>
+          <view class='price'>￥{{item.goods_price}}</view>
+          <view class='gouwu'>
+            <text class='gou'>规格：{{item.goods_spec}}</text>
+            <text class='gou' style='margin-left:20rpx;'>数量：{{item.goods_stock}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='all'>
+        <view style='margin-left:20rpx;'>共计：
+          <text style='font-size: 30rpx;color: #F21E00;'>￥{{cell.order_info.order_price}}</text>
+        </view>
+        <view>共{{cell.order_info.goods_num}}件商品</view>
+      </view>
+      <view class='fuan'>
+        <view class='fu' bindtap='nofu' data-orderid="{{cell.order_info.order_id}}">去付款</view>
+        <view class='qv' bindtap='qvxiao' data-orderid="{{cell.order_info.order_id}}">取消付款</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="swiper-item" wx:if="{{currentTab=='1'}}">
+    <view wx:for="{{fahuo}}" wx:key="index" wx:for-item="cell">
+      <view class='fukuan' wx:for="{{cell.goods_list}}" wx:key="index">
+        <view class='wupin' bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="{{item.is_type}}">
+          <view class='tu' style='background:url({{item.goods_img}}) no-repeat;background-size:100% 100%;'>
+            <!-- <image src='{{item.goods_img}}'></image> -->
+          </view>
+          <view class='right_ri'>
+            <view class='title'>{{item.goods_name}}</view>
+            <view class='jie'>{{item.goods_point}}</view>
+            <view class='price'>￥{{item.goods_price}}</view>
+            <view class='gouwu'>
+              <text class='gou'>规格：{{item.goods_spec}}</text>
+              <text class='gou' style='margin-left:20rpx;'>数量：{{item.goods_stock}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='all'>
+          <view style='margin-left:20rpx;'>共计：
+            <text style='font-size: 30rpx;color: #F21E00;'>￥{{cell.order_info.order_price}}</text>
+          </view>
+          <view>共{{cell.order_info.goods_num}}件商品</view>
+        </view>
+        <view class='fuan'>
+          <view>正在等待发货</view>
+        <view class='qv' bindtap='shenkuan' data-orderid="{{cell.order_info.order_id}}" data-goodid="{{index}}" data-index="{{index}}" style='margin-right:20rpx;'>申请退款</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="swiper-item" wx:if="{{currentTab=='2'}}">
+    <view class='fukuan' wx:for="{{shouhuo}}" wx:for-item="cell" wx:key="index">
+      <view class='wupin' wx:for="{{cell.goods_list}}" wx:key="index" bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="{{item.is_type}}">
+        <view class='tu' style='background:url({{item.goods_img}}) no-repeat;background-size:100% 100%;'>
+          <!-- <image src='{{item.goods_img}}'></image> -->
+        </view>
+        <view class='right_ri'>
+          <view class='title'>{{item.goods_name}}</view>
+          <view class='jie'>{{item.goods_point}}</view>
+          <view class='price'>￥{{item.goods_price}}</view>
+          <view class='gouwu'>
+            <text class='gou'>规格：{{item.goods_spec}}</text>
+            <text class='gou' style='margin-left:20rpx;'>数量：{{item.goods_stock}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='all'>
+        <view style='margin-left:20rpx;'>共计：
+          <text style='font-size: 30rpx;color: #F21E00;'>￥{{cell.order_info.order_price}}</text>
+        </view>
+        <view>共{{cell.order_info.goods_num}}件商品</view>
+      </view>
+      <view class='fuan'>
+        <view class='fu' bindtap='queshou' data-queshou="{{cell.order_info.order_id}}">确认收货</view>
+        <view class='qv' bindtap='shentui' data-orderid="{{cell.order_info.order_id}}" data-goodid="{{index}}" data-index="{{index}}">申请退款</view>
+        <view style='font-size: 24rpx;color: #7B7B7B;width:370rpx;text-align:left;'> {{cell.order_info.ex_name}}：{{cell.order_info.ex_sn}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="swiper-item" wx:if="{{currentTab=='3'}}">
+    <view class='fukuan' wx:for="{{wancheng}}" wx:for-item="cell" wx:key="index">
+      <view wx:for="{{cell.goods_list}}" wx:key="index">
+        <view class='wupin'  wx:key="index" bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="{{item.is_type}}">
+          <view class='tu' style='background:url({{item.goods_img}}) no-repeat;background-size:100% 100%;'>
+            <!-- <image src='{{item.goods_img}}'></image> -->
+          </view>
+          <view class='right_ri'>
+            <view class='title'>{{item.goods_name}}</view>
+            <view class='jie'>{{item.goods_point}}</view>
+            <view class='price'>￥{{item.goods_price}}</view>
+            <view class='gouwu' style='display: flex;justify-content: space-between;'>
+              <view>
+                <text class='gou'>规格：{{item.goods_spec}}</text>
+                <text class='gou' style='margin-left:20rpx;'>数量：{{item.goods_stock}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='all'>
+          <view style='margin-left:20rpx;'>共计：
+            <text style='font-size: 30rpx;color: #F21E00;'>￥{{cell.order_info.order_price}}</text>
+          </view>
+          <view>共{{cell.order_info.goods_num}}件商品</view>
+        </view>
+        <view class='fuan'>
+        <view class='qv' bindtap='shanchu' data-orderid="{{cell.order_info.order_id}}">删除</view>
+          <button class='tui' bindtap='tuihuo' session-from="7moor|{{zhongxin.user_nickname==userInfo.nickName}}|{{zhongxin.user_head_img==userInfo.avatarUrl}}" open-type="contact" session-from="weapp">退货</button>
+          
+          <view class='fu' wx:if="{{item.is_evaluate==1}}" bindtap='pingjia' data-goodid="{{item.goods_id}}" data-orderid="{{cell.order_info.order_id}}" data-type="{{item.is_type}}" data-goodname="{{item.goods_name}}">
+            去评价
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="swiper-item" wx:if="{{currentTab=='4'}}">
+    <view class='fukuan' wx:for="{{tuikuan}}" wx:key="index">
+      <view class='wupin' bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="{{item.is_type}}">
+        <view class='tu' style='background:url({{item.goods_img_thumb}}) no-repeat;background-size:100% 100%;'>
+          <!-- <image src='{{item.goods_img_thumb}}'></image> -->
+        </view>
+        <view class='right_ri'>
+          <view class='title'>{{item.goods_name}}</view>
+          <view class='jie'>{{item.goods_point}}</view>
+          <view class='price' wx:if="{{item.is_discount==1}}">￥{{item.goods_discount_price}}</view>
+          <view class='price' wx:else>￥{{item.goods_price}}</view>
+          <view class='gouwu'>
+            <text class='gou'>规格：{{item.goods_spec}}</text>
+            <text class='gou' style='margin-left:20rpx;'>数量：{{item.goods_stock}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='all'>
+        <view style='margin-left:20rpx;'>共计：
+          <text style='font-size: 30rpx;color: #F21E00;'>￥{{item.goods_pay_price}}</text>
+        </view>
+        <view>共{{item.goods_num}}件商品</view>
+      </view>
+      <view class='fuan'>
+        <view class='fu' wx:if="{{item.refund_is_status==1}}">处理中</view>
+        <view class='fu' wx:if="{{item.refund_is_status==2}}">已通过</view>
+        <view class='fu' wx:if="{{item.refund_is_status!=2&&item.refund_is_status!=1}}">已拒绝</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='delete' wx:if="{{delete==1}}" wx:for="{{wancheng}}" wx:for-item="cell" wx:key="index">
+  <view class='queshan'>
+    <view class='queren'>
+      <view class='queren_ma'>确定要删除这1种商品吗？</view>
+      <view class='queren_que'  bindtap='shan' data-orderid="{{cell.order_info.order_id}}">确定</view>
+    </view>
+    <view class='qvxiao' bindtap='qvshan'>取消</view>
+  </view>
+</view>

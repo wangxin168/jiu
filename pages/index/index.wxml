@@ -1,0 +1,84 @@
+<!-- <loading hidden="{{img && xinwen && tuijian}}">
+  加载中...
+</loading> -->
+<view class='search'>
+  <view class='searchInput' bindtap='serch'>
+    <i class="iconfont icon-sousuo"></i>
+    搜索您想要的物品
+  </view>
+  <i class="iconfont icon-xiaoxi" bindtap="xiaoxi"></i>
+</view>
+<!-- 轮播 -->
+<view class='banner'>
+  <swiper indicator-dots="{{indicatorDots}}" current="index" bindchange="swiperChange" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{img}}" wx:key="{{index}}">
+      <swiper-item style="background:url({{item.carousel_img}}) no-repeat;background-size:100% 100%;" bindtap='shopdetails' data-goodid="{{item.carousel_goods_id}}" data-type="4" data-isgood="{{item.is_goods_id}}">
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{img}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<!-- 新闻 -->
+<view class='xin'>
+  <view class='xin_da'>
+    <view class='tu'>
+      <image src='/img/logo.png' style='width:100%;height:100%;'></image>
+    </view>
+    <swiper class="xinwen" vertical="true" autoplay="true" circular="true" interval="1500" circular="true" skip-hidden-item-layout="true" display-multiple-items="2">
+      <block wx:for="{{xinwen}}" wx:key="index">
+        <swiper-item class="swiper-item" bindtap="xinwen" data-news="{{item.news_id}}">
+          <view class='da'>
+            <view class='left'>{{item.news_type}}</view>
+            <view class="swiper">{{item.news_title}}</view>
+          </view>
+        </swiper-item>
+
+      </block>
+    </swiper>
+  </view>
+</view>
+<view class='hui'>
+  <!-- 产品列表 -->
+  <view class='chanlie'>
+    <view class='chanlie_li' wx:for="{{chanpin}}" wx:key="index" bindtap='chaner' data-typeid="{{item.type_id}}" data-type="4" data-nochuan="1" data-name="{{item.type_name}}" data-twotypeid="">
+      <view class='tu'>
+        <image src='{{item.type_img}}'></image>
+      </view>
+      <view class='wen'>{{item.type_name}}</view>
+    </view>
+  </view>
+</view> 
+<!-- 推荐 -->
+<view class='tuijian' wx:for="{{tuijian}}" wx:key="index" wx:for-item="cell">
+  <view class='xian'></view>
+  <view class='ding'>
+    <view>
+      <image src='/img/beijingzi.png'></image>
+    </view>
+    <text class='si'>{{cell.goods_commend_title}}</text>
+    <text class='duo'>{{cell.goods_commend_dec}}</text>
+  </view>
+  <view class='datu' bindtap='tuixiang' data-xiang="{{cell.commend_id}}" data-title="{{cell.goods_commend_title}}">
+    <image src='{{cell.goods_commend_img}}'></image>
+  </view>
+  <view class='lie'>
+    <view class='lie_li' wx:for="{{cell.goods_list}}" wx:key="index">
+      <view class='tu' bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="4" data-goodname="{{item.goods_name}}">
+        <image src='{{item.goods_img}}'></image>
+      </view>
+      <view class='wen'>
+        <view class='goods_name'>{{item.goods_name}}</view>
+        <view class='goods_point'>{{item.goods_point}}</view>
+        <view class='goods_spec'>规格：{{item.goods_spec}}</view>
+        <view class='jia'>
+          <text class='goods_price'>￥{{item.goods_price}}</text>
+          <i class="iconfont icon-qicheqianlian-1-copy" bindtap='addshop' data-goodid="{{item.goods_id}}"></i>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

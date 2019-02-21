@@ -1,0 +1,33 @@
+<form bindsubmit="updateName">
+<view class='hui'>
+  <view class='tou' bindtap='up_img' name="up_img">
+    <image wx:if="{{tempFilePaths!=null}}" class='touxiang' src='{{tempFilePaths}}'></image>
+    <image wx:else class='touxiang' src='{{touxiang}}'></image>
+    <image class='zhe' src='/img/zhezhao.png'></image>
+  </view>
+  <view class='huan'>点击更换头像</view>
+</view>
+<view class='li'>
+  <view>昵称</view>
+  <input value='' placeholder='请输入昵称' name="username" value='{{zhongxin.user_nickname}}'></input>
+</view>
+<view class='li'>
+  <view>姓名</view>
+  <input value='' placeholder='请输入姓名' name="xingming" value='{{zhongxin.user_name}}'></input>
+</view>
+<view class='li'>
+  <view>性别</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"  style='font-size: 28rpx;color: #C3C3C3;width:80%;'>
+    <view style='margin-left: 33rpx;'>
+      {{array[index]}}
+      <input hidden name="sex" value='{{index+1}}'></input>
+    </view>
+  </picker>
+</view>
+<view class='shang'>
+  <text class='xiao'></text>
+  <text class='wen'>注册时间：{{zhongxin.user_register_time}}</text>
+  <text class='xiao'></text>
+</view>
+<button class='cun' form-type='submit'>确认</button> 
+</form>

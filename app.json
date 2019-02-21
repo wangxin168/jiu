@@ -1,0 +1,75 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/checkedtui/checkedtui",
+    "pages/wode/wode",
+    "pages/tuikuan/tuikuan",
+    "pages/willquan/willquan",
+    "pages/dingxiang/dingxiang",
+    "pages/xiaoxi/xiaoxi",
+    "pages/newsdetails/newsdetails",
+    "pages/pingjia/pingjia",
+    "pages/bianji/bianji",
+    "pages/youhui/youhui",
+    "pages/addxin/addxin",
+    "pages/dizhi/dizhi",
+    "pages/jifen/jifen",
+    "pages/queding/queding",
+    "pages/shouc/shouc",
+    "pages/geren/geren",
+    "pages/dingdan/dingdan",
+    "pages/gouwu/gouwu",
+    "pages/logs/logs",
+    "pages/serch/serch",
+    "pages/zixun/zixun",
+    "pages/dingfu/dingfu",
+    "pages/tuixiang/tuixiang",
+    "pages/shopxiang/shopxiang",
+    "pages/sange/sange",
+    "pages/chaner/chaner",
+    "pages/login/index",
+    "pages/setting/index",
+    "pages/changePhone/index",
+    "pages/carOrder/index",
+    "pages/about/index",
+    "pages/bindPhone/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color":"#AAAAAA",
+    "selectedColor":"#F1B22F",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/shouwei.png",
+        "selectedIconPath": "img/shouyw.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "分类",
+        "iconPath": "img/fenwei.png",
+        "selectedIconPath": "img/fenlei.png"
+      },
+      {
+        "pagePath": "pages/gouwu/gouwu",
+        "text": "购物车",
+        "iconPath": "img/gouwei.png",
+        "selectedIconPath": "img/gouwu.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的",
+        "iconPath": "img/wowei.png",
+        "selectedIconPath": "img/wode.png"
+      }
+    ]
+  }
+}

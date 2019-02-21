@@ -1,0 +1,17 @@
+.about{
+  width:84%;
+  margin:50rpx auto;
+  text-align: center;
+}
+.about>image{
+  width:161rpx;
+  height: 161rpx;
+}
+.about>.intro{
+  font-size: 28rpx;
+  margin-top:40rpx;
+  text-align: left;
+  color:#898989;
+  line-height: 1.5;
+  letter-spacing: 3rpx;
+}

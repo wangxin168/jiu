@@ -1,0 +1,13 @@
+<!--pages/pingjia/pingjia.wxml-->
+<!-- <text>pages/pingjia/pingjia.wxml</text> -->
+<form bindsubmit="bindFormSubmit">
+  <textarea placeholder="请输入您的退款理由" value="" name="textarea"/>
+  <view class='tian'>添加图片：</view>
+  <view class='shi'>
+    <image src='/img/shi.png' bindtap='up_img' name="up_img"/>
+      <image wx:for="{{tempFilePaths}}" src='{{item}}' wx:key="index" name="pic"/>
+      <input hidden name="pic" value ="{{tempFilePaths}}"></input>
+  </view>
+
+  <button form-type="submit"> 确认退款 </button>
+</form>

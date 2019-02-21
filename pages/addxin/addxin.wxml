@@ -1,0 +1,34 @@
+<import src="../../model/model.wxml"/>
+<view class='da'>
+<form bindsubmit="updateName">
+  <view class='li'>
+    <input value='' placeholder='收货人' name="username"></input>
+  </view>
+  <view class='li'>
+    <input value='' type="number" placeholder='联系方式' name="tel" maxlength="11"></input>
+  </view>
+  <view class='li'>
+    <!-- <button class="animation-button" bindtap="translate">所在区</button> -->
+    <input value='{{province}} {{city}} {{county}}' disabled="disabled" placeholder='所在区'  bindtap="translate"></input>
+  </view>
+  <view class='li'>
+    <input value='' placeholder='详细地址：如道路、门牌号、小区、楼栋号' name="address"></input>
+  </view>
+  <view class='xian'></view>
+  <view class='li'>
+    <text>设为默认地址</text>
+    <view>
+      <checkbox-group bindchange="bindCheckbox">
+        <label class="checkbox">
+          <checkbox value="" checked="{{checked}}" />
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class='xian'></view>
+  <button class='cun' form-type='submit' open-type="navigateBack">保存</button> 
+</form>
+<!-- <view class="infoText"></view> -->
+<template is="areaData" data="{{...item}}"/>
+</view>
+

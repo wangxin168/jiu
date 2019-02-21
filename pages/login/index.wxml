@@ -1,0 +1,7 @@
+<view class='login'>
+    <image src='/img/logo.png'></image>
+    <view class='title'>融鑫源商城</view>
+    <view class='trips'>申请获取以下权限</view>
+    <view class='infos'>获得你的公开信息（昵称，头像）</view>
+    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权登录</button>
+</view>

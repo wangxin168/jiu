@@ -1,0 +1,15 @@
+<!--pages/success/success.wxml-->
+<!-- <text>pages/success/success.wxml</text> -->
+<view class='da'>
+  <image src='/img/tong.png' class='tong'></image>
+  <view>审核通过</view>
+</view>
+<view class='pao'>
+  <view class='fan' bindtap='fan'>
+    返回首页
+  </view>
+  <view class='cha' bindtap='cha'>
+    查看帖子
+  </view>
+</view>
+

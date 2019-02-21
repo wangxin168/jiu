@@ -1,0 +1,49 @@
+<loading hidden="{{chaner}}">
+        加载中...
+</loading>
+<view class='menuBox'>
+    <view class='item' bindtap='dianJi' style='color:#F1B230;'>
+        <text>{{categray}}</text>
+        <i class="iconfont icon-down"></i>
+    </view>
+    <view class='item' bindtap='saleVolum'>
+        <text>销量</text>
+        <view class='icon'>
+            <i class="iconfont icon-up1 {{scale==2?'upactive':''}}"></i>
+            <i class="iconfont icon-down {{scale==1?'downactive':''}}"></i>
+        </view>
+    </view>
+    <view class='item' bindtap='pricesort'>
+        <text>价格</text>
+        <view class='icon'>
+            <i class="iconfont icon-up1 {{pric==1?'pactive':''}}"></i>
+            <i class="iconfont icon-down {{pric==2?'practives':''}}"></i>
+        </view>
+    </view>
+</view>
+<view class='chang'>
+  <view class='chaner' wx:for="{{chaner}}" wx:key="index" bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="{{item.is_type}}" data-goodname="{{item.goods_name}}">
+    <view class='tu' style='background:url({{item.goods_img_thumb}}) no-repeat;background-size:100% 100%;'>
+      <!-- <image src='{{item.goods_img_thumb}}' mode="widthFix"></image> -->
+    </view>
+    <view class='wen'>
+      <view class='goods_name'>
+      <view wx:if="{{type==5}}" class='tu'><image src='/img/san.png' style='width:100rpx;height:32rpx;'></image></view>
+      <view wx:if="{{type==2}}" class='tu'><image src='/img/jin.png' style='width:100rpx;height:32rpx;'></image></view>
+      <view wx:if="{{type==3}}" class='tu'><image src='/img/guo.png' style='width:100rpx;height:32rpx;'></image></view>
+      <view class='name' wx:if="{{type==1}}" style='width:100%;'>{{item.goods_name}}</view>
+      <view class='name' wx:if="{{type==4}}" style='width:100%;'>{{item.goods_name}}</view>
+      <view class='name' wx:if="{{type!=1&&type!=4}}">{{item.goods_name}}</view>
+      </view>
+      <view class='goods_point'>{{item.goods_point}}</view>
+      <view class='goods_price'>￥{{item.goods_price}}</view>
+      <view class='liang'><text>规格：{{item.goods_spec}}</text><text style='margin-left:40rpx;'>数量{{item.goods_stock}}</text></view>
+    </view>
+  </view>
+  <view class='liebie {{allcate==true?"show":"hide"}}' bindtap='dianJi'>
+    <view class='bai'>
+      <view bindtap='quanbu' class='{{cateid==-1?"chooes":""}}' data-allid="-1">全部</view>
+      <view wx:for="{{leibie}}" wx:key="index" bindtap='quaner' data-twotypeid="{{item.two_type_id}}" class='hui {{cateid==index?"chooes":""}}' data-allid="{{index}}"  data-cate="{{item.type_name}}">{{item.type_name}}</view>
+    </view>
+  </view>
+</view>

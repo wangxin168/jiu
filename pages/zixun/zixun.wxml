@@ -1,0 +1,11 @@
+<!--pages/zixun/zixun.wxml-->
+<!-- <text>pages/zixun/zixun.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='news_title'>
+  {{zixun.news_title}}
+</view>
+<view class='news_time'>{{zixun.news_time}}</view>
+<!-- <view class='news_msg'>{{zixun.news_msg}}</view> -->
+<view class='da'>
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>

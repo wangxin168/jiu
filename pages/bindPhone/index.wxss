@@ -1,0 +1,34 @@
+.box{
+  padding:100rpx 40rpx 0;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:2rpx solid #EDEDED;
+}
+.item input{
+  width:100%;
+  color:#BCBCBC;
+  font-size: 28rpx;
+  height: 90rpx;
+}
+.item>button{
+  width:180rpx;
+  background: transparent;
+  color:#F9C65B;
+  font-size: 28rpx;
+  padding:0;
+  position: relative;
+}
+.item button:after{
+  background: transparent;
+  border:none;
+}
+.box form button.sumBtn{
+  background: #F9C65B;
+  color:#fff;
+  margin-top:100rpx;
+  border-radius: 40rpx;
+}
+

@@ -1,0 +1,12 @@
+
+  <view class='da' wx:for="{{letter_list}}" wx:key="index">
+    <view class='shijian'>{{item.letter_time}}</view>
+    <view class='tuwen' bindtap='newsdetails' data-letterid="{{item.letter_id}}">
+      <view><image src='{{item.letter_img}}'></image></view>
+      <view class='wen'>
+        <text>{{item.letter_title}}</text>
+        <text>{{item.letter_dec}}</text>
+      </view>
+    </view>
+  </view>
+

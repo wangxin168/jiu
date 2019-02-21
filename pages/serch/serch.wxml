@@ -1,0 +1,15 @@
+<view class='sou'>
+    <i class="iconfont icon-sousuo"></i>
+    <input type='text' placeholder='搜索您想要的物品' bindinput="voteTitle" value="{{voteTitle}}" focus="true"/>
+  </view>
+<view class='chaner' wx:for="{{chaner}}" wx:key="index" bindtap='shopxiang' data-goodid="{{item.goods_id}}" data-type="{{item.is_type}}">
+  <view class='tu' style="background:url({{item.goods_img_thumb}}) no-repeat;background-size:100% 100%;">
+    <!-- <image src='{{item.goods_img_thumb}}'></image> -->
+  </view>
+  <view class='wen'>
+    <view class='goods_name'>{{item.goods_name}}</view>
+    <view class='goods_point'>{{item.goods_point}}</view>
+    <view class='goods_price'>￥{{item.goods_price}}</view>
+    <view class='liang'><text>{{item.goods_spec}}</text><text style='margin-left:40rpx;'>数量{{item.goods_stock}}</text></view>
+  </view>
+</view>

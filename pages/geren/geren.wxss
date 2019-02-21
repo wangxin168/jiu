@@ -1,0 +1,82 @@
+/* pages/geren/geren.wxss */
+.hui{
+  width: 100%;
+  height: 342rpx;
+  background: #F5F5F5;
+  overflow: hidden;
+
+}
+.hui .tou{
+  width: 204rpx;
+  height: 204rpx;
+  margin: 47rpx auto 27rpx;
+    position: relative;
+}
+.hui .tou .touxiang{
+  width: 204rpx;
+  height: 204rpx;
+  border-radius: 50%;
+  
+}
+.hui .tou .zhe{
+  width: 204rpx;
+  height: 204rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.huan{
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #C3C3C3;
+}
+.li{
+  width: 96%;
+  margin-left: 3%;
+  border-bottom: 1px solid  #ECECEC;
+  display: flex;
+  height: 102rpx;
+  align-items: center;
+  font-size: 30rpx;
+  color: #636363;
+}
+.li input{
+  width:85%;
+  height: 80rpx;
+  margin-left: 33rpx;
+}
+input::-webkit-input-placeholde{
+  font-size: 28rpx;
+  color: #C3C3C3;
+}
+.shang{
+  width: 74%;
+  left: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 150rpx;
+}
+.shang .xiao{
+  width: 132rpx;
+  height: 1rpx;
+  background: #F3F3F3;
+}
+.shang .wen{
+  font-size: 26rpx;
+color: #9F9F9F;
+letter-spacing: 0.46px;
+}
+.cun{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background: #f1b22f;
+  font-size: 30rpx;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+}
